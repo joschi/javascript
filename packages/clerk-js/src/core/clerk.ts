@@ -1197,7 +1197,7 @@ export class Clerk implements ClerkInterface {
     this.#emit();
   };
 
-  public __experimental_navigateToTask = async ({ redirectUrlComplete }: NextTaskParams = {}): Promise<void> => {
+  public __experimental_nextTask = async ({ redirectUrlComplete }: NextTaskParams = {}): Promise<void> => {
     const session = await this.session?.reload();
     if (!session || !this.environment) {
       return;
@@ -1214,7 +1214,7 @@ export class Clerk implements ClerkInterface {
     }
 
     const tracker = createBeforeUnloadTracker(this.#options.standardBrowser);
-    const defaultRedirectUrlComplete = this.client?.signUp ? this.buildAfterSignUpUrl() : this.buildAfterSignInUrl();
+    const defaultRedirectUrlComplete = this.client?.signUp ? this.buildAfterSignUpUrl() : this.buildAfterSignUpUrl();
 
     this.#setTransitiveState();
 
