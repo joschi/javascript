@@ -102,7 +102,7 @@ export function signedIn(
     // @ts-expect-error Dynamically return `SignedOutAuthObject` based on options
     toAuth: ({ treatPendingAsSignedOut = true } = {}) => {
       if (treatPendingAsSignedOut && authObject.sessionStatus === 'pending') {
-        return signedOutAuthObject();
+        return signedOutAuthObject(undefined, authObject.sessionStatus);
       }
 
       return authObject;
