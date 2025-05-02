@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.63.6
+
+### Patch Changes
+
+- Always revalidate when checkout drawer opens ([#5798](https://github.com/clerk/javascript/pull/5798)) by [@octoper](https://github.com/octoper)
+
 ## 5.63.5
 
 ### Patch Changes
